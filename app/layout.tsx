@@ -23,19 +23,19 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://quiznest.vercel.app",
+    canonical: "https://quiznest-seven.vercel.app/",
   },
   openGraph: {
     title: "Online Quizzes!",
     description: "Your gateway to fun and challenging quizzes",
-    url: "https://quiznest.vercel.app",
+    url: "https://quiznest-seven.vercel.app/",
     siteName: "Quiz Nest",
     locale: "en_PH",
     type: "website",
   },
-  // verification: {
-  //   google: 
-  // }
+  verification: {
+    google: "WGbTEVgu43c3Nf7xHNZzAcfHbepV_uTDKq9n4KSnj2g"
+  }
 };
 
 
