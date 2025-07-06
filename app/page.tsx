@@ -1,103 +1,149 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+	return (
+		<main>
+			<section className="flex flex-col justify-center items-center gap-2 h-screen bg-neutral-200 rounded-b-2xl">
+				<Image
+					height={480}
+					width={480}
+					alt=""
+					src={"/assets/images/quizNest.png"}
+					className="h-52 w-auto"
+				/>
+				<h1 className="text-3xl text-center">Welcome to QuizNest!</h1>
+				<h5 className="text-lg text-center">
+					Your gateway to fun and challenging quizzes! <br />
+					May be it be your own or challenge yourself with our
+					quizzes!
+				</h5>
+				<div className="flex w-fit justify-between gap-5 mt-5">
+					<button
+						type="button"
+						title="Custom"
+						className="bg-amber-300 px-4 py-2 rounded-2xl shadow shadow-neutral-700"
+					>
+						Answer Right Away!
+					</button>
+					<button
+						type="button"
+						title="Custom"
+						className="bg-amber-50 px-4 py-2 rounded-2xl shadow shadow-neutral-700"
+					>
+						Create Quiz!
+					</button>
+				</div>
+			</section>
+			<section className="h-fit w-full bg-neutral-200 my-1 p-10 rounded-2xl">
+				<h2 className="text-3xl text-center mb-2">
+					Lots of Topics to discover!
+				</h2>
+				<p className="text-center mb-4">
+					You think you can handle it all?
+				</p>
+				<QuizCard />
+			</section>
+			<section className="h-fit w-full bg-neutral-200 my-1 p-10 rounded-2xl flex flex-col justify-center items-center">
+				<h2 className="text-3xl text-center mb-2">Create Your Own!</h2>
+				<p className="text-center mb-4">
+					Need us to help you prepare for your test?
+				</p>
+				<button
+					type="button"
+					className="w-4/5 bg-amber-400 rounded-2xl flex items-center justify-center gap-2 py-2"
+				>
+					Create
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={2}
+						stroke="currentColor"
+						className="w-5 h-5"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M17 8l4 4m0 0l-4 4m4-4H3"
+						/>
+					</svg>
+				</button>
+				<p className="my-2">- or you have a share link?</p>
+				<input
+					className="bg-amber-50 border border-slate-900 px-2 py-1 w-4/5 rounded-md mb-2"
+					type="text"
+					placeholder="share-link"
+				/>
+				<button
+					type="button"
+					className="w-4/5 bg-amber-50 rounded-2xl flex items-center justify-center gap-2 py-2"
+				>
+					Open
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={2}
+						stroke="currentColor"
+						className="w-5 h-5"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M17 8l4 4m0 0l-4 4m4-4H3"
+						/>
+					</svg>
+				</button>
+			</section>
+			<section className="w-full rounded-2xl bg-neutral-200 p-10 my-1 flex flex-col justify-center items-center">
+				<h2 className="text-3xl text-center mb-2">Support?</h2>
+				<Image height={360} width={360} src={'/assets/images/quizNest-happy.png'} alt="" className="h-28 w-auto my-4"/>
+				<p className="text-center mb-4">
+					This is a hobby project - offered free of charge, if you find it useful consider sharing it with your friends or giving feedback or <strong>directly supporting</strong> me through this button:
+				</p>
+				<button type="button" className="bg-amber-400 w-3/4 py-2 rounded-xl shadow shadow-neutral-700" >
+					Support
+				</button>
+			</section>
+		</main>
+	);
+}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+function QuizCard() {
+	const quizzes = [
+		{
+			name: "Philippine History",
+		},
+		{
+			name: "General Knowledge",
+		},
+		{
+			name: "Science & Nature",
+		},
+		{
+			name: "World Geography",
+		},
+		{
+			name: "Pop Culture",
+		},
+	];
+
+	const isEven = (index: number) => {
+		return index % 2 === 0;
+	};
+	return (
+		<div className="flex flex-col gap-2">
+			{quizzes.map((quiz, index) => (
+				<div
+					className={`w-full h-fit rounded-2xl px-5 py-3 flex flex-col relative overflow-hidden
+					shadow-md shadow-neutral-950/40
+					${isEven(index) ? `bg-amber-300` : `bg-amber-50`}
+				`}
+					key={index}
+				>
+					<h1 className="w-full text-xl z-10">{quiz.name}</h1>
+				</div>
+			))}
+		</div>
+	);
 }
