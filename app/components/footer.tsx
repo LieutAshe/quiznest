@@ -20,7 +20,7 @@ export default function Footer() {
 				</div>
 				<div className="flex space-x-4">
 					<a
-						href="https://github.com/"
+						href="https://github.com/LieutAshe/quizNest"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="text-neutral-400 hover:text-white"
@@ -28,12 +28,12 @@ export default function Footer() {
 						GitHub
 					</a>
                     <a
-						href="https://github.com/"
+						href="/#"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="text-neutral-400 hover:text-white"
 					>
-						Support Me
+						Support Me {`(Not yet avaible :>)`}
 					</a>
 				</div>
 			</main>
