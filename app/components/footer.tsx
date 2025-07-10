@@ -33,7 +33,7 @@ export default function Footer() {
 						rel="noopener noreferrer"
 						className="text-neutral-400 hover:text-white"
 					>
-						Support Me {`(Not yet avaible :>)`}
+						Support Me {`(soon :>)`}
 					</a>
 				</div>
 			</main>
